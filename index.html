@@ -1,0 +1,290 @@
+<style>
+  body {
+    text-align: center;
+  }
+  @keyframes shadow-pulse {
+    0% {
+      box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+    }
+    100% {
+      box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);
+    }
+  }
+
+  .pulse {
+    z-index: 99;
+    position: absolute;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff;
+    text-align: center;
+    background: #58b0f0;
+    border-radius: 50%;
+    animation: shadow-pulse 1s infinite;
+  }
+
+  .popUp {
+    z-index: 100;
+    border-radius: 10px;
+    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+    padding: 10px;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    font-size: 13px;
+    background-color: #fff;
+  }
+
+  .imageMap {
+    width: 100%;
+    position: relative;
+    margin: 20px 0 100px 0;
+  }
+
+  .imageMap:hover .hotspots {
+    visibility: visible;
+  }
+
+  .imageMap img {
+    display: block;
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  .imageMap .hotspots {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    visibility: visible;
+  }
+  .hotspots > div > div {
+    display: block;
+    position: absolute;
+    z-index: 200;
+    filter: alpha(opacity=20);
+    -webkit-transition: 0.75s;
+    -moz-transition: 0.75s;
+    -o-transition: 0.75s;
+    transition: 0.75s;
+  }
+
+  .hotspots > div#id_expedia {
+    left: 47%;
+    top: 2%;
+    display: none;
+  }
+
+  .hotspots > div#id_booking {
+    left: 51%;
+    top: 4%;
+    display: none;
+  }
+
+  .hotspots > div#id_searchx {
+    left: 6%;
+    top: 20%;
+    width: 200px;
+    display: none;
+  }
+
+  .hotspots > div#id_iyge {
+    left: 69%;
+    top: 3%;
+    width: 200px;
+    display: none;
+  }
+
+  .hotspots > div#id_checkin {
+    left: 72%;
+    top: 51%;
+    width: 200px;
+    display: none;
+  }
+
+  .hotspots > div#id_guestx {
+    left: 72%;
+    top: 20%;
+    width: 200px;
+    display: none;
+  }
+
+  .hotspots > div#id_sfo {
+    left: 0%;
+    top: 78%;
+    width: 200px;
+    display: none;
+  }
+
+  .hotspots > div#id_sfc {
+    left: 82%;
+    top: 14%;
+    width: 200px;
+    display: none;
+  }
+  #p_expedia:hover + #id_expedia {
+    display: block;
+  }
+  #p_booking:hover + #id_booking {
+    display: block;
+  }
+  #p_searchx:hover + #id_searchx {
+    display: block;
+  }
+  #p_iyge:hover + #id_iyge {
+    display: block;
+  }
+  #p_guestx:hover + #id_guestx {
+    display: block;
+  }
+  #p_checkin:hover + #id_checkin {
+    display: block;
+  }
+  #p_sfo:hover + #id_sfo {
+    display: block;
+  }
+  #p_sfc:hover + #id_sfc {
+    display: block;
+  }
+
+  #p_expedia {
+    left: 43%;
+    top: 10%;
+    width: 5%;
+    height: 5%;
+  }
+
+  #p_booking {
+    left: 48%;
+    top: 14%;
+    width: 5%;
+    height: 5%;
+  }
+
+  #p_searchx {
+    left: 21%;
+    top: 54%;
+    width: 5%;
+    height: 5%;
+  }
+
+  #p_iyge {
+    left: 62%;
+    top: 15%;
+    width: 5%;
+    height: 5%;
+  }
+
+  #p_checkin {
+    left: 66%;
+    top: 86%;
+    width: 5%;
+    height: 5%;
+  }
+
+  #p_guestx {
+    left: 66%;
+    top: 35%;
+    width: 5%;
+    height: 5%;
+  }
+
+  #p_sfo {
+    left: 24%;
+    top: 70%;
+    width: 5%;
+    height: 5%;
+  }
+
+  #p_sfc {
+    left: 75%;
+    top: 54%;
+    width: 5%;
+    height: 5%;
+  }
+</style>
+<div style="text-align:-webkit-center;">
+  <div class="imageMap">
+    <img src="./image.PNG" />
+    <div class="hotspots">
+      <div title="Expedia"></div>
+      <div id="p_expedia" class="pulse"></div>
+      <div id="id_expedia" class="popUp">
+        <h3>Expedia</h3>
+      </div>
+
+      <div title="Booking.com"></div>
+      <div id="p_booking" class="pulse"></div>
+      <div id="id_booking" class="popUp">
+        <h3>Booking.com</h3>
+        <p></p>
+      </div>
+
+      <div title="SearchX"></div>
+      <div id="p_searchx" class="pulse"></div>
+      <div id="id_searchx" class="popUp">
+        <h3>SearchX</h3>
+        <p>
+          Use KePSLA SearchX to empower online shopping experience and inventory
+          merchandising
+        </p>
+      </div>
+
+      <div title="Improve your guest Experience"></div>
+      <div id="p_iyge" class="pulse"></div>
+      <div id="id_iyge" class="popUp">
+        <h3>Improve your guest experience</h3>
+        <p>
+          Decode and analyse guest reviews with our user-friendly review
+          analysis solution. Improve on each aspect of your services including
+          housekeeping, staff, food estate upkeep etc
+        </p>
+      </div>
+
+      <div title="Check-In"></div>
+      <div id="p_checkin" class="pulse"></div>
+      <div id="id_checkin" class="popUp">
+        <h3>Check - In</h3>
+        <p>
+          Our Feedback Management Solutions Capture Guest Preferences even
+          before they Check-in. Our Pre Check-in emails help you design the
+          perfect guest experience By understanding their needs before they
+          arrive.Upsell services and offers to your guests.
+        </p>
+      </div>
+
+      <div title="GuestX"></div>
+      <div id="p_guestx" class="pulse"></div>
+      <div id="id_guestx" class="popUp">
+        <h3>GuestX</h3>
+        <p>
+          A combination of feedback management solutions and review
+          intelligence. End to End Guest Experience
+        </p>
+      </div>
+
+      <div title="SearchX for OTAs"></div>
+      <div id="p_sfo" class="pulse"></div>
+      <div id="id_sfo" class="popUp">
+        <h3>SearchX for OTAs</h3>
+        <p>
+          Optimizing Website conversion rate through personalised information
+          (images, rates, amenities) based on visitor persona preferences,
+          habits or similar visitors.
+        </p>
+      </div>
+
+      <div title="SearchX for Consumers"></div>
+      <div id="p_sfc" class="pulse"></div>
+      <div id="id_sfc" class="popUp">
+        <h3>SearchX for Consumers</h3>
+        <p>
+          Our SearchX Chrome extension empowers end users with free aggregated
+          scores for any hotel queried. Works with Agoda,booking & Trip advisor.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
